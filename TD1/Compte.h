@@ -11,6 +11,9 @@ class Compte {
     void consultation();
     void retrait(int amount);
     void depot(int amount);
+    std::string getName();
+    int getId();
+    int getSolde();
 
     private :
 

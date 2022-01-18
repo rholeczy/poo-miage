@@ -71,9 +71,9 @@ void Point::modifier(Point &p)
 
 void Point::afficher()
 {
-    cout << "X : " << this->x << endl;
-    cout << "Y : " << this->y << endl;
-    cout << "Nom : " << this->name << endl;
+    cout << "X : " << x << endl;
+    cout << "Y : " << y << endl;
+    cout << "Nom : " << name << endl;
 }
 
 int main(int argc, char **argv)
