@@ -3,36 +3,36 @@
 
 using namespace std;
 
-
 // Constructeur
-Point::Point(int x,int y,string car)
+Point::Point(int x, int y, string car)
 {
-   this->x = x;
-   this->y = y;
-   this->name = car;
+    this->x = x;
+    this->y = y;
+    this->name = car;
 }
 
-// Constructeur de copie 
+// Constructeur de copie
 Point::Point(const Point &p)
 {
     x = p.x;
     y = p.y;
     name = p.name;
- }
+}
 
 // Destructeur
 Point::~Point() {}
 
-int Point::distant(Point p)
+int Point::distant()
 {
- if (p.x > p.y) {
-     return p.x - p.y;
- }
- else {
-     return p.y - p.x;
- }
+    if (this->x > this->y)
+    {
+        return this->x - this->y;
+    }
+    else
+    {
+        return this->y - this->x;
+    }
 }
-
 void Point::modifier(Point &p)
 {
     string rep;
@@ -69,25 +69,25 @@ void Point::modifier(Point &p)
     }
 }
 
-void Point::afficher(Point point)
+void Point::afficher()
 {
-    cout << "X : " << point.x << endl;
-    cout << "Y : " << point.y << endl;
-    cout << "Nom : " << point.name << endl;
+    cout << "X : " << this->x << endl;
+    cout << "Y : " << this->y << endl;
+    cout << "Nom : " << this->name << endl;
 }
 
 int main(int argc, char **argv)
 {
 
     Point *point;
-    point = new Point(12,6,"ABC");
-    Point copie=*point;
+    point = new Point(12, 6, "ABC");
+    Point copie = *point;
 
     delete point;
 
     //point.modifier(copie);
-    copie.afficher(copie);
+    copie.afficher();
 
-    cout << "Distance entre les deux points : "<< copie.distant(copie) << endl;
+    cout << "Distance entre les deux points : " << copie.distant() << endl;
     return 0;
 }

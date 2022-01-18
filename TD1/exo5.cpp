@@ -7,6 +7,21 @@ struct Point
     char name;
 };
 
+void initialise(Point &p, int x, int y, char car);
+
+void afficher(Point point);
+
+void modifier(Point &p);
+
+int main(int argc, char **argv)
+{
+    Point point;
+    initialise(point,3,2,'O');
+    modifier(point);
+    afficher(point);
+    return 0;
+}
+
 void initialise(Point &p, int x, int y, char car)
 {
     p.x = x;
@@ -55,13 +70,4 @@ void modifier(Point &p)
             cin >> p.name;
         }
     }
-}
-
-int main(int argc, char **argv)
-{
-    Point point;
-    initialise(point,3,2,'O');
-    modifier(point);
-    afficher(point);
-    return 0;
 }

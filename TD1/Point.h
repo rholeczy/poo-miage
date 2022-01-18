@@ -19,9 +19,23 @@ class Point {
 
     int distant(Point p);
 
+    void afficherDefault();
+
+    void afficherCopie();
+
+    void afficherParam();
+
+    void afficherDestruc();
+
     private :
     int x,y;
     std::string name;
+
+    static int nb_default;
+    static int nb_copie;
+    static int nb_param;
+    static int nd_destruc;
+
 };
 
 #endif

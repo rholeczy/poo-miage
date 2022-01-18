@@ -1,22 +1,22 @@
 #include <iostream>
-#include "Point.h"
+#include "PointExo7Debut.h"
 
 using namespace std;
 
-void Point::initialise(Point &p,int x,int y,char car)
+void Point::initialise(int x,int y,char car)
 {
-   p.x = x;
-   p.y = y;
-   p.name = car;
+   this->x = x;
+   this->y = y;
+   this->name = car;
 }
 
-int Point::distant(Point p)
+int Point::distant()
 {
- if (p.x > p.y) {
-     return p.x - p.y;
+ if (this->x > this->y) {
+     return this->x - this->y;
  }
  else {
-     return p.y - p.x;
+     return this->y - this->x;
  }
 }
 
@@ -56,20 +56,20 @@ void Point::modifier(Point &p)
     }
 }
 
-void Point::afficher(Point point)
+void Point::afficher()
 {
-    cout << "X : " << point.x << endl;
-    cout << "Y : " << point.y << endl;
-    cout << "Nom : " << point.name << endl;
+    cout << "X : " << this->x << endl;
+    cout << "Y : " << this->y << endl;
+    cout << "Nom : " << this->name << endl;
 }
 
 int main(int argc, char **argv)
 {
     Point point;
-    point.initialise(point,4,5,'B');
+    point.initialise(4,5,'B');
     point.modifier(point);
-    point.afficher(point);
+    point.afficher();
 
-    cout << "Distance entre les deux points : "<< point.distant(point) << endl;
+    cout << "Distance entre les deux points : "<< point.distant() << endl;
     return 0;
 }

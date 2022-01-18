@@ -14,6 +14,3 @@ void fct(int a,int b) //en-tête habituelle 11
     cout << "Premier argument : " << a << "\n" << "Second argument : "<< b << endl;
 }
 
-rholeczy@etu.u-bordeaux.fr
-
-motdepasse
