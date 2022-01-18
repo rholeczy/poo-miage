@@ -84,7 +84,7 @@ Compte Banque::getCompte(int idCompte)
     cout << "Erreur : Id non trouvé dans la liste des comptes.\n" << endl;
     //return &NULL;
     }
-}
+
 
 void Banque::DelCompte(int idCompte)
 {
