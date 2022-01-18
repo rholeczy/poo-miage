@@ -3,38 +3,39 @@
 
 using namespace std;
 
-
 // Constructeur
-Point::Point(int x,int y,string car)
+Point::Point(int x, int y, string car)
 {
-   this->x = x;
-   this->y = y;
-   this->name = car;
-   this->nb_default=0;
-   this->nb_param=0;
-   this->nb_copie=0;
-   this->nd_destruc=0;
+    this->x = x;
+    this->y = y;
+    this->name = car;
+    this->nb_default = 0;
+    this->nb_param = 0;
+    this->nb_copie = 0;
+    this->nd_destruc = 0;
 }
 
-// Constructeur de copie 
+// Constructeur de copie
 Point::Point(const Point &p)
 {
     x = p.x;
     y = p.y;
     name = p.name;
- }
+}
 
 // Destructeur
 Point::~Point() {}
 
 int Point::distant()
 {
- if (this->x > this->y) {
-     return this->x - this->y;
- }
- else {
-     return this->y - this->x;
- }
+    if (this->x > this->y)
+    {
+        return this->x - this->y;
+    }
+    else
+    {
+        return this->y - this->x;
+    }
 }
 
 void Point::modifier(Point &p)
@@ -80,40 +81,39 @@ void Point::afficher()
     cout << "Nom : " << this->name << endl;
 }
 
-
-
 // Les afficher du 8.1
-void Point::afficherDefault(){
+void Point::afficherDefault()
+{
     cout << this->nb_default << endl;
 }
 
-void Point::afficherCopie(){
+void Point::afficherCopie()
+{
     cout << this->nb_copie << endl;
 }
 
-void Point::afficherParam(){
+void Point::afficherParam()
+{
     cout << this->nb_param << endl;
 }
 
-void Point::afficherDestruc(){
+void Point::afficherDestruc()
+{
     cout << this->nd_destruc << endl;
 }
-
-
-
 
 int main(int argc, char **argv)
 {
 
     Point *point;
-    point = new Point(12,6,"ABC");
-    Point copie=*point;
+    point = new Point(12, 6, "ABC");
+    Point copie = *point;
 
     delete point;
 
     //point.modifier(copie);
     copie.afficher();
 
-    cout << "Distance entre les deux points : "<< copie.distant() << endl;
+    cout << "Distance entre les deux points : " << copie.distant() << endl;
     return 0;
 }

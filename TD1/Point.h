@@ -15,9 +15,9 @@ class Point {
 
     void modifier(Point &p);
 
-    void afficher(Point point);
+    void afficher();
 
-    int distant(Point p);
+    int distant();
 
     void afficherDefault();
 

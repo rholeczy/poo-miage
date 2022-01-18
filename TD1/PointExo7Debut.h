@@ -7,13 +7,13 @@ class Point {
 
     public :
 
-    void initialise(Point &p,int x,int y,char car);
+    void initialise(int x,int y,char car);
 
     void modifier(Point &p);
 
-    void afficher(Point point);
+    void afficher();
 
-    int distant(Point p);
+    int distant();
 
     private :
     int x,y;
