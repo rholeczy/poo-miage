@@ -8,6 +8,7 @@ class Compte {
     public :
 
     Compte(int id,std::string name,int sold);
+    
     void consultation();
     void retrait(int amount);
     void depot(int amount);

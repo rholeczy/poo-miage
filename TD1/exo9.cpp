@@ -62,7 +62,8 @@ void Banque::addCompte(Compte compte)
 
 void Banque::showComptes()
 {
-    cout << "Liste comptes :\n" << endl;
+    cout << "Liste comptes :\n"
+         << endl;
     for (int i(0); i < tableauComptes.size(); ++i)
     //On utilise notes.size() pour la limite de notre boucle
     {
@@ -81,10 +82,10 @@ Compte Banque::getCompte(int idCompte)
         }
         i++;
     }
-    cout << "Erreur : Id non trouvé dans la liste des comptes.\n" << endl;
+    cout << "Erreur : Id non trouvé dans la liste des comptes.\n"
+         << endl;
     //return &NULL;
-    }
-
+}
 
 void Banque::DelCompte(int idCompte)
 {
@@ -95,14 +96,16 @@ void Banque::DelCompte(int idCompte)
         if (tableauComptes[i].getId() == idCompte)
         {
             tableauComptes.erase(tableauComptes.begin() + i);
-            
-            cout << "\nCompte supprimé.\n" << endl;
+
+            cout << "\nCompte supprimé.\n"
+                 << endl;
             trouve = true;
         }
         i++;
     }
     if (!trouve)
-        cout << "Erreur : Id non trouvé dans la liste des comptes.\n" << endl;
+        cout << "Erreur : Id non trouvé dans la liste des comptes.\n"
+             << endl;
 }
 
 int main(int argc, char **argv)
