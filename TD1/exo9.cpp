@@ -73,19 +73,17 @@ void Banque::showComptes()
 Compte Banque::getCompte(int idCompte)
 {
     int i = 0;
-    bool trouve = false;
-    while ((!trouve) || i < tableauComptes.size())
+    while (i < tableauComptes.size())
     {
         if (tableauComptes[i].getId() == idCompte)
         {
             return tableauComptes[i];
-            trouve=true;
         }
         i++;
     }
-    if (!trouve){
-        cout << "Erreur : Id non trouvé dans la liste des comptes.\n" << endl;
-        }
+    cout << "Erreur : Id non trouvé dans la liste des comptes.\n" << endl;
+    //return &NULL;
+    }
 }
 
 void Banque::DelCompte(int idCompte)
