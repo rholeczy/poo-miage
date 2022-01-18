@@ -3,12 +3,25 @@
 
 using namespace std;
 
-void Point::initialise(Point &p,int x,int y,char car)
+
+// Constructeur
+Point::Point(int x,int y,string car)
 {
-   p.x = x;
-   p.y = y;
-   p.name = car;
+   this->x = x;
+   this->y = y;
+   this->name = car;
 }
+
+// Constructeur de copie 
+Point::Point(const Point &p)
+{
+    x = p.x;
+    y = p.y;
+    name = p.name;
+ }
+
+// Destructeur
+Point::~Point() {}
 
 int Point::distant(Point p)
 {
@@ -65,11 +78,16 @@ void Point::afficher(Point point)
 
 int main(int argc, char **argv)
 {
-    Point point;
-    point.initialise(point,4,5,'B');
-    point.modifier(point);
-    point.afficher(point);
 
-    cout << "Distance entre les deux points : "<< point.distant(point) << endl;
+    Point *point;
+    point = new Point(12,6,"ABC");
+    Point copie=*point;
+
+    delete point;
+
+    //point.modifier(copie);
+    copie.afficher(copie);
+
+    cout << "Distance entre les deux points : "<< copie.distant(copie) << endl;
     return 0;
 }

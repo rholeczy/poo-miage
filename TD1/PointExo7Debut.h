@@ -7,11 +7,7 @@ class Point {
 
     public :
 
-    Point(int x,int y,std::string car);
-
-    Point(const Point &p);
-
-    ~Point();
+    void initialise(Point &p,int x,int y,char car);
 
     void modifier(Point &p);
 
@@ -21,7 +17,7 @@ class Point {
 
     private :
     int x,y;
-    std::string name;
+    char name;
 };
 
 #endif
