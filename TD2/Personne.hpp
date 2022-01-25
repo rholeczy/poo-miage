@@ -8,8 +8,16 @@ class Personne{
 
 public :
 
-private :
+Personne(string,string prenom,int age);
+Personne();
+~Personne();
 
+void affiche();
+
+private :
+static int age;
+static char nom[20];
+static char prenom[20];
 
 
 };
