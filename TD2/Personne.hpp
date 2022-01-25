@@ -8,16 +8,17 @@ class Personne{
 
 public :
 
-Personne(string,string prenom,int age);
+Personne(char const *name,char const *surname,int lage);
 Personne();
+Personne(const Personne &p);
 ~Personne();
 
 void affiche();
 
 private :
-static int age;
-static char nom[20];
-static char prenom[20];
+ int age;
+ char nom[20];
+ char prenom[20];
 
 
 };

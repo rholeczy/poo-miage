@@ -1,32 +1,62 @@
 #include <iostream>
 #include "Personne.hpp"
 
-#include "string"
+#include <cstring>
 
 using namespace std;
 
-
 // Constructeur
-Personne::Personne(char nom[20],char prenom[20],int age)
+Personne::Personne(char const *name, char const *surname, int lage)
 {
-    this->nom = nom;
-    this->prenom = prenom;
-    this->age = age;
+  strcpy(this->nom, name);
+  strcpy(this->prenom, surname);
+  this->age = lage;
 }
 
+// Constructeur par défaut
+Personne::Personne()
+{
+  this->nom[0] = '\0';
+  this->prenom[0] = '\0';
+  this->age = 0;
+}
 
+// Constructeur de copie
+Personne::Personne(const Personne &p)
+{
+  strcpy(nom, p.nom);
+  strcpy(prenom, p.prenom);
+  age = p.age;
+}
 
-
+// Destructeur
+Personne::~Personne() {}
 
 void Personne::affiche()
 {
-cout << "Test" << endl;
+  cout << "Nom : " << this->nom << "\nPrenom :" << this->prenom << "\nAge :" << this->age << endl;
 }
 
 int main(int argc, char **argv)
 {
-  const int size=20 ;
-  Personne personne[size] ;
- 
+  Personne *moi = new Personne("Holeczy", "Romain", 20);
+  Personne *ami = moi;
+  Personne *vide = new Personne();
+
+  moi->affiche();
+  cout << "-----------------------" << endl;
+  ami->affiche();
+  cout << "-----------------------" << endl;
+  vide->affiche();
+
+  delete ami;
+
+  cout << "---------------- DEUXIEME TENTATIVE ----------------" << endl;
+  moi->affiche();
+  cout << "-----------------------" << endl;
+  ami->affiche();
+  cout << "-----------------------" << endl;
+  vide->affiche();
   return 0;
 }
+
