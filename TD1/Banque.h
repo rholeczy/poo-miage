@@ -3,13 +3,11 @@
 
 #include <string>
 #include <vector>
-#include "Compte.h"
 
 class Banque{
 
     public :
 
-    
     void showComptes();
     void addCompte(Compte compte);
     void DelCompte(int idCompte);
