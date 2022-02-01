@@ -65,9 +65,9 @@ void Banque::showComptes()
     cout << "Liste comptes :\n"
          << endl;
     for (int i(0); i < tableauComptes.size(); ++i)
-    //On utilise notes.size() pour la limite de notre boucle
+    
     {
-        cout << "Id : " << tableauComptes[i].getId() << " | Nom : " << tableauComptes[i].getName() << " | Solde : " << tableauComptes[i].getSolde() << "€" << endl; //On additionne toutes les notes
+        cout << "Id : " << tableauComptes[i].getId() << " | Nom : " << tableauComptes[i].getName() << " | Solde : " << tableauComptes[i].getSolde() << "€" << endl;
     }
 }
 
