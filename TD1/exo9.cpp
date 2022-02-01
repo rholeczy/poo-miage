@@ -71,56 +71,40 @@ void Banque::showComptes()
     }
 }
 
-bool getCompteInlist(int idCompte, std::vector<Compte> tableauComptes)
+Compte Banque::getCompte(int idCompte)
 {
-    bool trouve = false;
+    int i = 0;
     while (i < tableauComptes.size())
     {
         if (tableauComptes[i].getId() == idCompte)
         {
+            return tableauComptes[i];
+        }
+        i++;
+    }
+    cout << "Erreur : Id non trouvé dans la liste des comptes.\n"
+         << endl;
+}
+
+void Banque::DelCompte(int idCompte)
+{
+    int i = 0;
+    bool trouve = false;
+    while ((!trouve) && i < tableauComptes.size())
+    {
+        if (tableauComptes[i].getId() == idCompte)
+        {
+            tableauComptes.erase(tableauComptes.begin() + i);
+
+            cout << "\nCompte supprimé.\n"
+                 << endl;
             trouve = true;
         }
         i++;
     }
     if (!trouve){
         cout << "Erreur : Id non trouvé dans la liste des comptes.\n"
-             << endl;
-    }    
-    return trouve;
-}
-
-Compte Banque::getCompte(int idCompte)
-{
-    int i = 0;
-    if getCompteInList(idCompte, tableauComptes){
-        while (i < tableauComptes.size())
-        {
-            if (tableauComptes[i].getId() == idCompte)
-            {
-                return tableauComptes[i];
-            }
-            i++;
-        }
-    }    
-}
-
-void Banque::DelCompte(int idCompte)
-{
-    int i = 0;
-    if getCompteInList(idCompte, tableauComptes){
-        while (i < tableauComptes.size())
-        {
-            if (tableauComptes[i].getId() == idCompte)
-            {
-                tableauComptes.erase(tableauComptes.begin() + i);
-
-                cout << "\nCompte supprimé.\n"
-                     << endl;
-                trouve = true;
-            }
-            i++;
-        }
-    }
+             << endl;}
 }
 
 int main(int argc, char **argv)
