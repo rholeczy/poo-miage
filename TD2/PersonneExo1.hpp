@@ -17,8 +17,8 @@ void affiche();
 
 private :
  int age;
- char *nom = new char[20];
- char *prenom = new char[20];
+ char nom[20];
+ char prenom[20];
 
 
 };
