@@ -13,7 +13,7 @@ Personne();
 Personne(const Personne &p);
 ~Personne();
 
-void affiche() const;
+void affiche();
 
 private :
  int age;
