@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Personne.hpp"
+#include "PersonneExo1.hpp"
 
 #include <cstring>
 
@@ -59,4 +59,3 @@ int main(int argc, char **argv)
   vide->affiche();
   return 0;
 }
-

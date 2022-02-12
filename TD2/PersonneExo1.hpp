@@ -19,7 +19,5 @@ private :
  int age;
  char nom[20];
  char prenom[20];
-
-
 };
 #endif
