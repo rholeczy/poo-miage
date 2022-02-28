@@ -3,8 +3,6 @@
 
 using namespace std;
 
-
-
 // Destructeur
 Pile::~Pile()
 {

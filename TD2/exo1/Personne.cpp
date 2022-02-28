@@ -1,6 +1,5 @@
 #include <iostream>
-#include "PersonneExo1.hpp"
-
+#include "Personne.hpp"
 #include <cstring>
 
 using namespace std;
@@ -35,27 +34,4 @@ Personne::~Personne() {}
 void Personne::affiche()
 {
   cout << "Nom : " << this->nom << "\nPrenom :" << this->prenom << "\nAge :" << this->age << endl;
-}
-
-int main(int argc, char **argv)
-{
-  Personne *moi = new Personne("Holeczy", "Romain", 20);
-  Personne *ami = moi;
-  Personne *vide = new Personne();
-
-  moi->affiche();
-  cout << "-----------------------" << endl;
-  ami->affiche();
-  cout << "-----------------------" << endl;
-  vide->affiche();
-
-  delete ami;
-
-  cout << "---------------- DEUXIEME TENTATIVE ----------------" << endl;
-  moi->affiche();
-  cout << "-----------------------" << endl;
-  ami->affiche();
-  cout << "-----------------------" << endl;
-  vide->affiche();
-  return 0;
 }
