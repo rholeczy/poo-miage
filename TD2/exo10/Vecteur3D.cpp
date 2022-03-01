@@ -19,7 +19,6 @@ int Vecteur3D::cote()
 }
 
 bool Vecteur3D::coincide(Vecteur3D v) {
-    int vX = v.abscisse();
     if ((v.abscisse() == this->abscisse()) && (v.ordonnee() == this->ordonnee()) && (v.cote() == this->cote()) ) {
         return true;
     }

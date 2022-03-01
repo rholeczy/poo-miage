@@ -18,16 +18,18 @@ int Vecteur3D::cote()
     return this->z;
 }
 
-bool Vecteur3D::coincide(Vecteur3D v) {
-    int vX = v.abscisse();
-    if ((v.abscisse() == this->abscisse()) && (v.ordonnee() == this->ordonnee()) && (v.cote() == this->cote()) ) {
-        return true;
+int coincide(Vecteur3D v1, Vecteur3D v2)
+{
+    if ((v1.abscisse() == v2.abscisse()) && (v1.ordonnee() == v2.ordonnee()) && (v1.cote() == v2.cote()))
+    {
+        return 1;
     }
-
-    else {
-        return false;
+    else
+    {
+        return 0;
     }
 }
+
 void Vecteur3D::fixer_abscisse(int nouvAbs)
 {
     this->x = nouvAbs;
