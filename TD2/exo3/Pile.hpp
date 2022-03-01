@@ -1,4 +1,4 @@
-
+#ifndef DEF_PILE
 #define DEF_PILE
 
 #include <string>
@@ -43,3 +43,4 @@ private:
     int *donnees;
     int taille;
 };
+#endif
