@@ -1,85 +1,66 @@
 #include <iostream>
-#include "Pile.hpp"
+using namespace std; 
+#include "Pile.hpp" 
 
-using namespace std;
-
-// Destructeur
-Pile::~Pile()
-{
-    empty();
+pileEntiers::pileEntiers(){ 
+    taille=20; 
+    sommet=-1; 
+    donnes=new int [TD]; 
 }
 
-void Pile::empty()
-{
-    if (taille > 0){
-        delete[] donnees;
-        taille = 0;
+pileEntiers::pileEntiers(int n){
+    donnes=new int[n];
+    taille=n; sommet=-1; 
+}
+
+pileEntiers::pileEntiers(const pileEntiers & pile){ 
+    sommet=pile.sommet;
+    taille=pile.taille;
+    donnes=new int[taille];
+    for (int i=0;i<pile.taille;i++){
+        donnes[i]=pile.donnes[i];
+    } 
+}
+
+pileEntiers::~pileEntiers(){
+     cout<<"destruction"<<endl;
+     delete[]donnes;
+     taille=0;
+     sommet=-1;
+} 
+
+void pileEntiers::empiler(int p){
+    sommet++;
+    donnes[sommet]=p;
+} 
+
+int pileEntiers::depile(){
+    int res;
+    res = donnes[sommet];
+    sommet--;
+    return res;
+}
+
+int pileEntiers::pleine(){ 
+    int res; 
+    if(sommet==(taille-1)){ 
+        res = 1;
+    } else {
+        res = 0;
     }
+    return res;
 }
 
-int Pile::isEmpty(Pile pile)
-{
-    if (taille > 0){
+int pileEntiers::vide(){ 
+    if(sommet==-1){
         return 1;
-    }else{
-        return 0;
-    }
-}
+    } 
+    return 0;
+} 
 
-int Pile::isFull(Pile pile)
-{
-    int tmp = 0;
-    for (int i = 0; i < taille; i++){
-        if (donnees[i] != NULL){
-            tmp++;
-        }
-    }
-    if (taille == tmp){
-        return 1;
-    }else{
-        return 0;
-    }
-}
-
-int Pile::empiler(const int &element)
-{
-    int *temp = new int[taille + 1];
-    if (temp == NULL)
-    {
-        return 0;
-    }
-    for (int i = 0; i < taille; i++)
-    {
-        temp[i] = donnees[i];
-    }
-    temp[taille] = element;
-    if (taille > 0)
-    {
-        delete[] donnees;
-        donnees = temp;
-        taille++;
-        return 1;
-    }
-}
-
-int Pile::depiler(int &resultat)
-{
-    if (taille == 0){
-        return 0;
-    }
-    int *temp = new int[taille - 1];
-    if (temp == NULL){
-        return 0;
-    }
-    resultat = donnees[--taille];
-    for (int i = 0; i < taille; i++){
-        temp[i] = donnees[i];
-    }
-    delete[] donnees;
-    donnees = temp;
-    return 1;
-}
-
-int main(int argc, char **argv)
-{
+void pileEntiers::afficher(){
+    for(int i=0;i<=sommet;i++){ 
+        cout<<donnes[i]<<"|";
+        } 
+        cout<<endl;
 }
