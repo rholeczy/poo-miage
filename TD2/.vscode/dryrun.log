@@ -1,4 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
+objc[1027]: Class AMSupportURLConnectionDelegate is implemented in both /usr/lib/libauthinstall.dylib (0x1feafab90) and /Library/Apple/System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/MobileDevice (0x1063702c8). One of the two will be used. Which one is undefined.
+objc[1027]: Class AMSupportURLSession is implemented in both /usr/lib/libauthinstall.dylib (0x1feafabe0) and /Library/Apple/System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/MobileDevice (0x106370318). One of the two will be used. Which one is undefined.
+ 
 make: Entering directory `/Users/rholeczy/Desktop/Cours/git/poo-miage/TD2'
 make: Leaving directory `/Users/rholeczy/Desktop/Cours/git/poo-miage/TD2'
  
