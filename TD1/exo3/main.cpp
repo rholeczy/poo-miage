@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void fct(int=3, int=12); // proto avec une valeur par défaut
+void fct(int=3, int=12); // avec une valeur par défaut
 int main(int argc, char** argv){
     int n=10, p=20;
     fct(n,p); // appel 'normal'

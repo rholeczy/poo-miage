@@ -40,3 +40,4 @@ void Personne::affiche() const
     // On ne peut pas modifier car on a const donc l'objet est non modifiable.
     cout << "Nom : " << this->nom << "\nPrenom :" << this->prenom << "\nAge :" << this->age << endl;
 }
+
