@@ -2,6 +2,7 @@
 #include "Point.hpp"
 
 using namespace std;
+
 void Point::initialise(int x,int y,char car)
 {
    this->x = x;
