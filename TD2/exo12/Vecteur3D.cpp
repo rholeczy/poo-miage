@@ -46,12 +46,12 @@ void Vecteur3D::fixer_cote(int nouvCote)
 }
 void Vecteur3D::affiche()
 {
-    cout << "\nX : " << this->x << "\nY :" << this->y << "\nZ :" << this->z << endl;
+    cout << "\nX : " << this->x << "\nY : " << this->y << "\nZ : " << this->z << endl;
 }
 
 void Vecteur3D::affiche(const char *message)
 {
     cout << "\n"
          << message << endl;
-    cout << "\nX : " << this->x << "\nY :" << this->y << "\nZ :" << this->z << endl;
+    cout << "\nX : " << this->x << "\nY : " << this->y << "\nZ : " << this->z << endl;
 }
