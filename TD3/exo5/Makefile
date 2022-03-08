@@ -18,5 +18,6 @@ Poisson.o: Poisson.cpp
 
 Mammifere.o: Mammifere.cpp
 	$(CC) $(CFLAGS) -c Mammifere.cpp
+
 clean: 
 	rm -f core *.o

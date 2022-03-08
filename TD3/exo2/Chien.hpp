@@ -1,9 +1,6 @@
 #ifndef CHIEN_HPP
 #define CHIEN_HPP
 
-#include "Animal.hpp"
-#include <string>
-
 class Chien:public Animal{
 
 public :

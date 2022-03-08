@@ -1,8 +1,6 @@
 #ifndef DEF_POINT
 #define DEF_POINT
 
-#include <string>
-
 class Point {
 
     public :

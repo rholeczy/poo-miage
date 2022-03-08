@@ -1,9 +1,6 @@
 #ifndef DEF_BANQUE
 #define DEF_BANQUE
-
-#include <string>
 #include <vector>
-
 class Banque{
 
     public :

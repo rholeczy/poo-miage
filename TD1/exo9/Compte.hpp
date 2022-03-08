@@ -1,8 +1,6 @@
 #ifndef DEF_COMPTE
 #define DEF_COMPTE
 
-#include <string>
-
 class Compte {
 
     public :
