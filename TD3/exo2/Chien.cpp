@@ -3,8 +3,6 @@
 
 using namespace std;
 
-
-
 Chien::Chien(){
     this->nomducri = "aboie";
     this->cri ="";

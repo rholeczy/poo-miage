@@ -15,6 +15,7 @@ Chien(const Chien &c);
 
 void presenter();
 
+
 protected :
 std::string cri;
 

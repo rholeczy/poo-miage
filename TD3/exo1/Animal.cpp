@@ -31,6 +31,7 @@ void Animal::vieillir()
 {
     this->age++;
 }
+
 void Animal::presenter(){
     cout << "L'animal a " << this->age << " ans et pousse le cri : " << this->nomducri << endl;
 }

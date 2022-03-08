@@ -12,5 +12,11 @@ Animal.o: Animal.cpp
 
 Chien.o: Chien.cpp
 	$(CC) $(CFLAGS) -c Chien.cpp
+
+Poisson.o: Poisson.cpp
+	$(CC) $(CFLAGS) -c Poisson.cpp
+
+Mammifere.o: Mammifere.cpp
+	$(CC) $(CFLAGS) -c Mammifere.cpp
 clean: 
 	rm -f core *.o

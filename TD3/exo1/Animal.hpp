@@ -7,8 +7,8 @@ class Animal{
 
 public :
 
-Animal() : age(0),nomducri(""){};
-Animal(int lage,std::string lenomducri) : age(lage),nomducri(lenomducri){};
+Animal();
+Animal(int lage,std::string lenomducri);
 Animal(const Animal &a);
 ~Animal();
 
