@@ -11,4 +11,7 @@ int main(int argc, char **argv){
     animDeux->vieillir();
     animDeux->presenter();
     animUn->presenter();
+
+    delete animUn;
+    delete animDeux;
 }

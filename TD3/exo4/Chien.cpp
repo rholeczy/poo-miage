@@ -3,25 +3,28 @@
 
 using namespace std;
 
-
-
 Chien::Chien(){
     this->nomducri = "aboie";
     this->cri ="";
+    cout << "Chien crée" << endl;
 };
 
 Chien::Chien(int _age, string _cri):Animal(_age, "aboie") {
     cri = _cri;
+    cout << "Chien crée" << endl;
 };
 
 // Constructeur de copie
 Chien::Chien(const Chien &c)
 {
     this->cri = c.cri;
+    cout << "Chien crée" << endl;
 }
 
 // Destructeur
-Chien::~Chien() {}
+Chien::~Chien() {
+    cout << "Chien mort" << endl;
+}
 
 void Chien::presenter()
 {

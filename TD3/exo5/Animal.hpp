@@ -10,7 +10,7 @@ public :
 Animal();
 Animal(int lage,std::string lenomducri);
 Animal(const Animal &a);
-~Animal();
+virtual ~Animal();
 
 void vieillir();
 void presenter();

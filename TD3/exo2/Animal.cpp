@@ -3,6 +3,20 @@
 
 using namespace std;
 
+// Constructeur
+Animal::Animal(int lage,string lenomducri)
+{
+    this->age = lage;
+    this->nomducri = lenomducri;
+}
+
+// Constructeur par défaut
+Animal::Animal()
+{
+    this->age = 0;
+    this->nomducri = "";
+}
+
 // Constructeur de copie
 Animal::Animal(const Animal &a)
 {
