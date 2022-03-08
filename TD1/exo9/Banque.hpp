@@ -1,6 +1,7 @@
 #ifndef DEF_BANQUE
 #define DEF_BANQUE
 #include <vector>
+
 class Banque{
 
     
