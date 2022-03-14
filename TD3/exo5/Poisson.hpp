@@ -3,6 +3,8 @@
 
 class Poisson:public virtual Animal{
 
+ // Le mot-clé virtual permet à la classe petite-fille d'hériter aussi de la classe mère actuelle.
+ 
 public:
 Poisson();
 Poisson(const Poisson &p);
