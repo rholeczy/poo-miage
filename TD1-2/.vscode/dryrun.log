@@ -1,6 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/rholeczy/Desktop/Cours/git/poo-miage/TD1'
-make: Leaving directory `/Users/rholeczy/Desktop/Cours/git/poo-miage/TD1'
- 
-make: *** No targets specified and no makefile found.  Stop.
- 
