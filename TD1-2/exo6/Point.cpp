@@ -3,21 +3,23 @@
 
 using namespace std;
 
-void Point::initialise(int x,int y,char car)
+void Point::initialise(int x, int y, char car)
 {
-   this->x = x;
-   this->y = y;
-   this->name = car;
+    this->x = x;
+    this->y = y;
+    this->name = car;
 }
 
 int Point::distant()
 {
- if (this->x > this->y) {
-     return this->x - this->y;
- }
- else {
-     return this->y - this->x;
- }
+    if (this->x > this->y)
+    {
+        return this->x - this->y;
+    }
+    else
+    {
+        return this->y - this->x;
+    }
 }
 
 void Point::modifier(Point &p)

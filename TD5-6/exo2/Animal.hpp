@@ -1,21 +1,20 @@
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
 
-class Animal{
+class Animal
+{
 
-public :
+public:
+    Animal();
+    Animal(int lage, std::string lenomducri);
+    Animal(const Animal &a);
+    ~Animal();
 
-Animal();
-Animal(int lage,std::string lenomducri);
-Animal(const Animal &a);
-~Animal();
+    void vieillir();
+    void presenter();
 
-void vieillir();
-void presenter();
-
-protected :
-int age;
-std::string nomducri;
-
+protected:
+    int age;
+    std::string nomducri;
 };
 #endif

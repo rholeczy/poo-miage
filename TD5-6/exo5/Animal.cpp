@@ -14,10 +14,10 @@ Animal::Animal(int lage, string lenomducri)
 // Constructeur par défaut
 Animal::Animal()
 {
-    this->nom ="";
-    this->estFemelle=false;
-    this->x=0;
-    this->y=0;
+    this->nom = "";
+    this->estFemelle = false;
+    this->x = 0;
+    this->y = 0;
     this->age = 0;
     this->nomducri = "";
     cout << "Animal crée" << endl;
@@ -44,46 +44,54 @@ void Animal::presenter()
     cout << "L'animal a " << this->age << " ans et pousse le cri : " << this->nomducri << endl;
 }
 
-string Animal::getNom() {
+string Animal::getNom()
+{
     return this->nom;
 }
 
-bool Animal::getGenre() {
+bool Animal::getGenre()
+{
     return this->estFemelle;
 }
 
-int Animal::getX() {
+int Animal::getX()
+{
     return this->x;
 }
 
-int Animal::getY() {
+int Animal::getY()
+{
     return this->y;
 }
 
-void Animal::deplacer(int _x, int _y) {
-    if (this->estFemelle) {
+void Animal::deplacer(int _x, int _y)
+{
+    if (this->estFemelle)
+    {
         this->x = _x;
         this->y = _y;
     }
 
-    else {
+    else
+    {
         cout << "L'animal n'est pas une femelle" << endl;
     }
-   
 }
 
-void Animal::engendrer() {
-    if (this->estFemelle) {
-    cout << "L'animal a engendré" << endl;}
+void Animal::engendrer()
+{
+    if (this->estFemelle)
+    {
+        cout << "L'animal a engendré" << endl;
+    }
 }
 
-void Animal::setName(string _nom) {
+void Animal::setName(string _nom)
+{
     this->nom = _nom;
 }
 
-void Animal::setGenre(bool genre) {
+void Animal::setGenre(bool genre)
+{
     this->estFemelle = genre;
 }
-
-
-

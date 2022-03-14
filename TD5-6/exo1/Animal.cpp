@@ -4,7 +4,7 @@
 using namespace std;
 
 // Constructeur
-Animal::Animal(int lage,string lenomducri)
+Animal::Animal(int lage, string lenomducri)
 {
     this->age = lage;
     this->nomducri = lenomducri;
@@ -32,6 +32,7 @@ void Animal::vieillir()
     this->age++;
 }
 
-void Animal::presenter(){
+void Animal::presenter()
+{
     cout << "L'animal a " << this->age << " ans et pousse le cri : " << this->nomducri << endl;
 }

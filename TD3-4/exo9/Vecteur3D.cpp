@@ -10,6 +10,7 @@ void Vecteur3D::affiche()
 
 void Vecteur3D::affiche(const char *message)
 {
-    cout << "\n" << message << endl;
+    cout << "\n"
+         << message << endl;
     cout << "\nX : " << this->x << "\nY : " << this->y << "\nZ : " << this->z << endl;
 }

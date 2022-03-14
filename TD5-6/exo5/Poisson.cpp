@@ -4,20 +4,21 @@
 
 using namespace std;
 
-Poisson::Poisson(){
-    this->profondeur=0;
+Poisson::Poisson()
+{
+    this->profondeur = 0;
     cout << "Poisson crée" << endl;
 };
 
 // Constructeur de copie
 Poisson::Poisson(const Poisson &p)
 {
-    this->profondeur=p.profondeur;
+    this->profondeur = p.profondeur;
     cout << "Poisson crée" << endl;
 }
 
 // Destructeur
-Poisson::~Poisson() {
+Poisson::~Poisson()
+{
     cout << "Poisson mort" << endl;
 }
-

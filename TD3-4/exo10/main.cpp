@@ -18,5 +18,4 @@ int main(int argc, char **argv)
     vecZero->fixer_ordonnee(5);
     vecZero->fixer_cote(2001);
     cout << "VecZero et VecUn coincide ? : " << vecZero->coincide(*vecUn) << endl;
-    
 }

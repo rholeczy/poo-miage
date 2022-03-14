@@ -1,17 +1,17 @@
 #ifndef MAMMIFERE_HPP
 #define MAMMIFERE_HPP
 
-class Mammifere:public virtual Animal{
+class Mammifere : public virtual Animal
+{
 
- // Le mot-clé virtual permet à la classe petite-fille d'hériter aussi de la classe mère actuelle.
- 
+    // Le mot-clé virtual permet à la classe petite-fille d'hériter aussi de la classe mère actuelle.
+
 public:
-Mammifere();
-Mammifere(const Mammifere &m);
-~Mammifere();
+    Mammifere();
+    Mammifere(const Mammifere &m);
+    ~Mammifere();
 
-protected :
-double vitesse;
-
+protected:
+    double vitesse;
 };
-#endif 
+#endif

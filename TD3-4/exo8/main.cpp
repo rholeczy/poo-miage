@@ -4,7 +4,7 @@ using namespace std;
 
 int sommeInt(int v1, int v2);
 float sommeFloat(float v1, float v2);
-int* sommeArray(int *tabUn, int *tabDeux);
+int *sommeArray(int *tabUn, int *tabDeux);
 
 int main(int argc, char **argv)
 {
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 int sommeInt(int v1, int v2) { return v1 + v2; }
 float sommeFloat(float v1, float v2) { return v1 + v2; }
 
-int* sommeArray(int *tabUn, int *tabDeux)
+int *sommeArray(int *tabUn, int *tabDeux)
 {
     int *tabTrois = new int[10];
     for (int i = 0; i < 10; i++)

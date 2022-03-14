@@ -64,7 +64,7 @@ private:
 int main(int argc, char **argv)
 {
     Point point;
-    point.initialise(point,4,6,'O');
+    point.initialise(point, 4, 6, 'O');
     point.modifier(point);
     point.afficher(point);
     return 0;

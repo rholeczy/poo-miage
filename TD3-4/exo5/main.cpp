@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 void affiche(const int &n);
 
 int main(int argc, char **argv)
@@ -23,5 +22,3 @@ void affiche(const int &n)
     cout << n << endl;
     // Le const nous empeche de modifier la valeure de n.
 }
-
-

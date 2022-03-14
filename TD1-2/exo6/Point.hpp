@@ -1,11 +1,11 @@
 #ifndef DEF_POINT
 #define DEF_POINT
 
-class Point {
+class Point
+{
 
-    public :
-
-    void initialise(int x,int y,char car);
+public:
+    void initialise(int x, int y, char car);
 
     void modifier(Point &p);
 
@@ -13,8 +13,8 @@ class Point {
 
     int distant();
 
-    private :
-    int x,y;
+private:
+    int x, y;
     char name;
 };
 

@@ -3,11 +3,12 @@
 
 using namespace std;
 
-int main(int argc, char **argv){
+int main(int argc, char **argv)
+{
 
     //Exercice 1
     Animal *animUn = new Animal();
-    Animal *animDeux = new Animal(6,"aboie");
+    Animal *animDeux = new Animal(6, "aboie");
     animDeux->vieillir();
     animDeux->presenter();
     animUn->presenter();

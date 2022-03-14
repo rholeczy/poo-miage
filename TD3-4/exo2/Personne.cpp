@@ -29,7 +29,8 @@ Personne::Personne(const Personne &p)
 }
 
 // Destructeur
-Personne::~Personne() {
+Personne::~Personne()
+{
   delete[] nom;
   delete[] prenom;
 }

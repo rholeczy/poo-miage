@@ -5,10 +5,9 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
- Personne *moi = new Personne("Holeczy", "Romain", 20); // On crée une personne.
-  Personne *ami = moi; // On crée un ami avec le constructeur de copie.
-  Personne *vide = new Personne(); // On utilise le constructeur par défaut.
-
+  Personne *moi = new Personne("Holeczy", "Romain", 20); // On crée une personne.
+  Personne *ami = moi;                                   // On crée un ami avec le constructeur de copie.
+  Personne *vide = new Personne();                       // On utilise le constructeur par défaut.
 
   // On affiche tout le monde
   moi->affiche();
@@ -29,5 +28,3 @@ int main(int argc, char **argv)
 
   return 0;
 }
-
-

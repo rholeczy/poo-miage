@@ -10,8 +10,8 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    // Il faut utiliser des virtual class pour PointColore et PointMasse pour pouvoir accéder aux coordonnées.
-    PointColMas *p = new PointColMas(22,5); // PointColMas crée
+
+    PointColMas *p = new PointColMas(22, 5); // PointColMas crée
     p->setColor("Rouge");
     p->setMasse(22);
     p->affiche();

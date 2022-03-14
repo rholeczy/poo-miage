@@ -16,7 +16,7 @@ void modifier(Point &p);
 int main(int argc, char **argv)
 {
     Point point;
-    initialise(point,3,2,'O');
+    initialise(point, 3, 2, 'O');
     modifier(point);
     afficher(point);
     return 0;

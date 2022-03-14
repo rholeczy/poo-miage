@@ -8,19 +8,20 @@ using namespace std;
 
 Dauphin::Dauphin()
 {
-    this->cri="";
+    this->cri = "";
     cout << "Dauphin crée" << endl;
 };
 
 // Constructeur de copie
 Dauphin::Dauphin(const Dauphin &d)
 {
-    this->cri=d.cri;
+    this->cri = d.cri;
     cout << "Dauphin crée" << endl;
 }
 
 // Destructeur
-Dauphin::~Dauphin() {
+Dauphin::~Dauphin()
+{
     cout << "Dauphin mort" << endl;
 }
 

@@ -3,7 +3,6 @@
 #include "Banque.hpp"
 using namespace std;
 
-
 void Banque::addCompte(Compte compte)
 {
     this->tableauComptes.push_back(compte);

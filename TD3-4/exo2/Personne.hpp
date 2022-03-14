@@ -1,20 +1,20 @@
 #ifndef DEF_PERSONNE
 #define DEF_PERSONNE
 
-class Personne{
+class Personne
+{
 
-public :
+public:
+    Personne(char const *name, char const *surname, int lage);
+    Personne();
+    Personne(const Personne &p);
+    ~Personne();
 
-Personne(char const *name,char const *surname,int lage);
-Personne();
-Personne(const Personne &p);
-~Personne();
+    void affiche();
 
-void affiche();
-
-private :
- int age;
- char *nom = new char[20];
- char *prenom = new char[20];
+private:
+    int age;
+    char *nom = new char[20];
+    char *prenom = new char[20];
 };
 #endif

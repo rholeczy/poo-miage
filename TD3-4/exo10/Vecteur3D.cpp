@@ -18,12 +18,15 @@ int Vecteur3D::cote()
     return this->z;
 }
 
-bool Vecteur3D::coincide(Vecteur3D v) {
-    if ((v.abscisse() == this->abscisse()) && (v.ordonnee() == this->ordonnee()) && (v.cote() == this->cote()) ) {
+bool Vecteur3D::coincide(Vecteur3D v)
+{
+    if ((v.abscisse() == this->abscisse()) && (v.ordonnee() == this->ordonnee()) && (v.cote() == this->cote()))
+    {
         return true;
     }
 
-    else {
+    else
+    {
         return false;
     }
 }

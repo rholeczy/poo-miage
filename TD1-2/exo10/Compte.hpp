@@ -3,12 +3,12 @@
 
 #include <string>
 
-class Compte {
+class Compte
+{
 
-    public :
+public:
+    Compte(int id, std::string name, int sold);
 
-    Compte(int id,std::string name,int sold);
-    
     void consultation();
     void retrait(int amount);
     void depot(int amount);
@@ -16,8 +16,7 @@ class Compte {
     int getId();
     int getSolde();
 
-    private :
-
+private:
     int idClient;
     std::string nameClient;
     int soldClient;

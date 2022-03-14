@@ -1,11 +1,11 @@
 #ifndef DEF_POINT
 #define DEF_POINT
 
-class Point {
+class Point
+{
 
-    public :
-
-    Point(int x,int y,std::string car);
+public:
+    Point(int x, int y, std::string car);
 
     Point(const Point &p);
 
@@ -25,15 +25,14 @@ class Point {
 
     void afficherDestruc();
 
-    private :
-    int x,y;
+private:
+    int x, y;
     std::string name;
 
     static int nb_default;
     static int nb_copie;
     static int nb_param;
     static int nd_destruc;
-
 };
 
 #endif

@@ -1,18 +1,16 @@
 #ifndef DEF_BANQUE
 #define DEF_BANQUE
 #include <vector>
-class Banque{
+class Banque
+{
 
-    public :
-
+public:
     void showComptes();
     void addCompte(Compte compte);
     void DelCompte(int idCompte);
     Compte getCompte(int idCompte);
 
-    private :
+private:
     std::vector<Compte> tableauComptes;
-
-
 };
 #endif

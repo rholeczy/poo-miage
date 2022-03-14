@@ -13,7 +13,7 @@ void Banque::showComptes()
     cout << "Liste comptes :\n"
          << endl;
     for (int i(0); i < tableauComptes.size(); ++i)
-    
+
     {
         cout << "Id : " << tableauComptes[i].getId() << " | Nom : " << tableauComptes[i].getName() << " | Solde : " << tableauComptes[i].getSolde() << "€" << endl;
     }
@@ -50,7 +50,9 @@ void Banque::DelCompte(int idCompte)
         }
         i++;
     }
-    if (!trouve){
+    if (!trouve)
+    {
         cout << "Erreur : Id non trouvé dans la liste des comptes.\n"
-             << endl;}
+             << endl;
+    }
 }

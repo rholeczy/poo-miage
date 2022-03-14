@@ -13,11 +13,9 @@ int main(int argc, char **argv)
     vecDeux->affiche("Vecteur Deux :");
 
     // Exercice 12
-    cout << "VecZero et VecUn coincide ? : " << coincide(*vecUn,*vecZero) << endl;
+    cout << "VecZero et VecUn coincide ? : " << coincide(*vecUn, *vecZero) << endl;
     vecZero->fixer_abscisse(22);
     vecZero->fixer_ordonnee(5);
     vecZero->fixer_cote(2001);
-    cout << "VecZero et VecUn coincide ? : " << coincide(*vecUn,*vecZero) << endl;
-    
+    cout << "VecZero et VecUn coincide ? : " << coincide(*vecUn, *vecZero) << endl;
 }
-

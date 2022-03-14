@@ -28,7 +28,5 @@ int main(int argc, char **argv)
     // Possible
     chouchou = rex; // Impossible d'assigner une valeure Animal à un chien mais le contraire est possible.
 
-
     delete chouchou;
-    
 }

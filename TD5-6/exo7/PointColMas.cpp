@@ -13,17 +13,18 @@ PointColMas::PointColMas()
     cout << "PointColMas crée" << endl;
 };
 
-PointColMas::PointColMas(int _x, int _y):Point(_x, _y) {
-    this->x=_x;
-    this->y=_y;
+PointColMas::PointColMas(int _x, int _y) : Point(_x, _y)
+{
+    this->x = _x;
+    this->y = _y;
     cout << "PointColMas crée" << endl;
 };
 
 // Constructeur de copie
 PointColMas::PointColMas(const PointColMas &pcm)
 {
-    this->couleur=pcm.couleur;
-    this->masse=pcm.masse;
+    this->couleur = pcm.couleur;
+    this->masse = pcm.masse;
     cout << "PointColMas crée" << endl;
 }
 
@@ -33,7 +34,8 @@ PointColMas::~PointColMas()
     cout << "PointColMas a disparu..." << endl;
 }
 
-void PointColMas::affiche() {
+void PointColMas::affiche()
+{
     cout << "X : " << this->x << " Y : " << this->y << endl;
     cout << "Couleur : " << this->couleur << endl;
     cout << "Masse : " << this->masse << endl;

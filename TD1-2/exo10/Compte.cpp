@@ -53,4 +53,3 @@ int Compte::getSolde()
 {
     return this->soldClient;
 }
-
