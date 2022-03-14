@@ -14,6 +14,10 @@ Animal::Animal(int lage, string lenomducri)
 // Constructeur par défaut
 Animal::Animal()
 {
+    this->nom ="";
+    this->estFemelle=false;
+    this->x=0;
+    this->y=0;
     this->age = 0;
     this->nomducri = "";
     cout << "Animal crée" << endl;

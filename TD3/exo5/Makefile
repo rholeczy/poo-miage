@@ -1,8 +1,8 @@
 CFLAGS = -O
 CC = g++
 
-prog: main.o Animal.o Chien.o
-	$(CC) $(CFLAGS) -o prog main.o Animal.o Chien.o
+prog: main.o Animal.o Chien.o Poisson.o Mammifere.o Dauphin.o
+	$(CC) $(CFLAGS) -o prog main.o Animal.o Chien.o Poisson.o Mammifere.o Dauphin.o
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) -c main.cpp
@@ -18,6 +18,9 @@ Poisson.o: Poisson.cpp
 
 Mammifere.o: Mammifere.cpp
 	$(CC) $(CFLAGS) -c Mammifere.cpp
+
+Dauphin.o: Dauphin.cpp
+	$(CC) $(CFLAGS) -c Dauphin.cpp
 
 clean: 
 	rm -f core *.o

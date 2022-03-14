@@ -9,6 +9,7 @@ Poisson();
 Poisson(const Poisson &p);
 ~Poisson();
 
+
 protected :
 double profondeur;
 

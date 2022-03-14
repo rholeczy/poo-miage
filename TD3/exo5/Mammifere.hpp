@@ -2,8 +2,13 @@
 #define MAMMIFERE_HPP
 
 
-class Mammifere:virtual Animal{
-/* Virtual inheritance from Animal */
+class Mammifere:public virtual Animal{
+
+public :
+
+Mammifere();
+Mammifere(const Mammifere &m);
+~Mammifere();
 
 protected :
 double vitesse;
