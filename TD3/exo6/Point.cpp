@@ -11,8 +11,24 @@ Point::Point()
     cout << "Point crée" << endl;
 };
 
+Point::Point(int _x, int _y) {
+    cout << "Point crée" << endl;
+};
+
+// Constructeur de copie
+Point::Point(const Point &p)
+{
+    this->x=p.x;
+    this->y=p.y;
+    cout << "Point crée" << endl;
+}
+
 // Destructeur
 Point::~Point()
 {
     cout << "Point a disparu..." << endl;
+}
+
+void Point::affiche() {
+    cout << "X : " << this->x << " Y : " << this->y << endl;
 }

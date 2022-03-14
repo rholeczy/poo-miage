@@ -8,5 +8,5 @@ int main(int argc, char **argv)
 {
     PointColore *p = new PointColore(22,5); // PointColore crée
     p->setColor("rouge");
-    
+    p->affiche();
 }
