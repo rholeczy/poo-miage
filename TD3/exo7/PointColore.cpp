@@ -20,7 +20,7 @@ PointColore::PointColore(int _x, int _y):Point(_x, _y) {
 PointColore::PointColore(const PointColore &pc)
 {
     this->couleur=pc.couleur;
-    cout << "Chien crée" << endl;
+    cout << "PointColore crée" << endl;
 }
 
 // Destructeur
