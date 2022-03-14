@@ -10,6 +10,8 @@ Masse(const Masse &m);
 ~Masse();
 
 void affiche();
+void setMasse(int _masse);
+
 protected :
 int masse;
 };

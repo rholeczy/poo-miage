@@ -9,7 +9,9 @@ Couleur(std::string _couleur);
 Couleur(const Couleur &c);
 ~Couleur();
 
+void setColor(std::string _couleur);
 void affiche();
+
 protected :
 std::string couleur;
 };

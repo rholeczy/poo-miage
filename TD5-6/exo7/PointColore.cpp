@@ -1,12 +1,12 @@
 #include <iostream>
 #include "Point.hpp"
+#include "Couleur.hpp"
 #include "PointColore.hpp"
 
 using namespace std;
 
 PointColore::PointColore()
 {
-    this->couleur = "";
     cout << "PointColore crée" << endl;
 };
 
@@ -27,10 +27,6 @@ PointColore::PointColore(const PointColore &pc)
 PointColore::~PointColore()
 {
     cout << "PointColore a disparu..." << endl;
-}
-
-void PointColore::setColor(string _couleur){
-    this->couleur=_couleur;
 }
 
 void PointColore::affiche() {

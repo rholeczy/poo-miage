@@ -1,7 +1,8 @@
 #ifndef POINTCOLORE_HPP
 #define POINTCOLORE_HPP
 
-class PointColore:public Point{
+class PointColore:public virtual Point,public Couleur{
+// Il faut utiliser des virtual class pour PointColore et PointMasse pour pouvoir accéder aux coordonnées.
 
 public :
 PointColore();
@@ -9,10 +10,7 @@ PointColore(int _x,int _y);
 PointColore(const PointColore &pc);
 ~PointColore();
 
-void setColor(std::string _couleur);
 void affiche();
 
-protected :
-std::string couleur;
 };
 #endif

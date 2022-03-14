@@ -31,3 +31,7 @@ Masse::~Masse()
 void Masse::affiche() {
     cout << "Masse : " << this->masse << endl;
 }
+
+void Masse::setMasse(int _masse) {
+   this->masse=_masse;
+}

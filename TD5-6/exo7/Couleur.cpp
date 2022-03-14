@@ -31,3 +31,7 @@ Couleur::~Couleur()
 void Couleur::affiche() {
     cout << "Couleur : " << this->couleur << endl;
 }
+
+void Couleur::setColor(std::string _couleur){
+    this->couleur=_couleur;
+}
