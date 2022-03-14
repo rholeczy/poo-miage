@@ -1,14 +1,12 @@
 #ifndef POISSON_HPP
 #define POISSON_HPP
 
-class Poisson:public Animal{
+class Poisson:public virtual Animal{
 
-public :
-
+public:
 Poisson();
 Poisson(const Poisson &p);
 ~Poisson();
-
 
 protected :
 double profondeur;

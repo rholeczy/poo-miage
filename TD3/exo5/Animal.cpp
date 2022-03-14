@@ -77,3 +77,13 @@ void Animal::engendrer() {
     cout << "L'animal a engendré" << endl;}
 }
 
+void Animal::setName(string _nom) {
+    this->nom = _nom;
+}
+
+void Animal::setGenre(bool genre) {
+    this->estFemelle = genre;
+}
+
+
+
