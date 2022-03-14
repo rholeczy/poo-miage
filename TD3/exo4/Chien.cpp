@@ -11,7 +11,7 @@ Chien::Chien(){
 };
 
 Chien::Chien(int _age, string _cri):Animal(_age, "aboie") {
-    cri = _cri;
+    this->cri = _cri;
     cout << "Chien crée" << endl;
 };
 

@@ -8,14 +8,6 @@ using namespace std;
 
 Dauphin::Dauphin()
 {
-    this->vitesse = 0;
-    this->profondeur = 0;
-    this->x = 0;
-    this->y = 0;
-    this->nom = "";
-    this->age=0;
-    this->estFemelle=false;
-    this->nomducri="";
     this->cri="";
     cout << "Dauphin crée" << endl;
 };
@@ -23,14 +15,6 @@ Dauphin::Dauphin()
 // Constructeur de copie
 Dauphin::Dauphin(const Dauphin &d)
 {
-     this->vitesse = d.vitesse;
-    this->profondeur = d.profondeur;
-    this->x = d.x;
-    this->y = d.y;
-    this->nom = d.nom;
-    this->age=d.age;
-    this->estFemelle=d.estFemelle;
-    this->nomducri=d.nomducri;
     this->cri=d.cri;
     cout << "Dauphin crée" << endl;
 }

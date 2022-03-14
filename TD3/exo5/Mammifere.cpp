@@ -6,12 +6,6 @@ using namespace std;
 
 Mammifere::Mammifere() {
     this->vitesse=0;
-    this->x=0;
-    this->y=0;
-    this->nom="";
-    this->age=0;
-    this->estFemelle=false;
-    this->nomducri="";
     cout << "Mammifere crée" << endl;
 
 }
