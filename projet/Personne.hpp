@@ -21,5 +21,8 @@ protected:
     std::string rue;
     std::string ville;
     int cp;
+    bool contact;
+    bool rdv;
+    enum vaccination : int;
 };
 #endif
