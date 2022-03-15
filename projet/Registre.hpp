@@ -10,10 +10,19 @@ public:
     ~Registre();
 
     void affiche();
+    void afficherPremiereDoseContact();
+    void afficherDeuxiemeDoseContact();
+    void afficherNoContact();
+    void afficherEnAttente();
+    void changerPrio(Personne laPersonne);
+
     void ajout(Personne laPersonne);
-    void modifStatutAppel(Personne laPersonne, bool action);
-    void modifStatutRdv(Personne laPersonne, bool reponse);
-    void modifStatutVaccination(Personne laPersonne, Personne::etatVaccinal etat);
+    void supprime(Personne laPersonne);
+
+
+    void modifStatutContact(Personne laPersonne, bool estContact);
+    void modifStatutRdv(Personne laPersonne, bool enRdv);
+    void modifStatutVaccination(Personne laPersonne, Personne::etatVaccinal _etat);
 
 private:
     std::map<std::string, Personne> leRegistre;
