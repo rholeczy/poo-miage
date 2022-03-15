@@ -10,5 +10,8 @@ main.o: main.cpp
 Personne.o: Personne.cpp
 	$(CC) $(CFLAGS) -c Personne.cpp
 
+Registre.o: Registre.cpp
+	$(CC) $(CFLAGS) -c Registre.cpp
+
 clean: 
 	rm -f core *.o
