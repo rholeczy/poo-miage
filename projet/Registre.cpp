@@ -31,6 +31,6 @@ void Registre::ajout(Personne laPersonne)
     }
     else
     {
-        //this->leRegistre[]
+        this->leRegistre[laPersonne.getId()] = laPersonne;
     }
 }
