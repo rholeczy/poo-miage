@@ -114,6 +114,5 @@ void Registre::afficherEnAttente()
 void Registre::changerPrio(Personne laPersonne)
 {
     laPersonne.updatePrio();
-    supprime(laPersonne);
-    ajout(laPersonne);
+    this->leRegistre[laPersonne.getId()] = laPersonne;
 }
