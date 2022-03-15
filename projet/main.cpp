@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 #include "Personne.hpp"
 #include "Patient.hpp"
 #include "Registre.hpp"
