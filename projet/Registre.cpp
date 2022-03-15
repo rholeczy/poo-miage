@@ -8,19 +8,16 @@ using namespace std;
 Registre::Registre()
 {
     this->leRegistre.clear();
-    cout << "Registre crée" << endl;
 };
 
 Registre::Registre(const Registre &r)
 {
     this->leRegistre = r.leRegistre;
-    cout << "Registre crée" << endl;
 };
 
 // Destructeur
 Registre::~Registre()
 {
-    cout << "Registre a disparu..." << endl;
 }
 
 void Registre::ajout(Personne laPersonne)
@@ -32,5 +29,16 @@ void Registre::ajout(Personne laPersonne)
     else
     {
         this->leRegistre[laPersonne.getId()] = laPersonne;
+    }
+}
+
+void Registre::affiche()
+{
+    map<string, Personne>::iterator p; //Création d'un itérator sur le 'map'
+    cout << "Voici le contenu du Registre : " << endl;
+    for (p = this->leRegistre.begin(); p != this->leRegistre.end(); p++)
+    {
+        cout << p->first << " : ";
+        p->second.afficher();
     }
 }

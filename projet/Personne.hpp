@@ -6,10 +6,12 @@ class Personne
 
 public:
     Personne();
-    Personne(std::string _idSecu, std::string _nom, std::string _prenom);
+    Personne(std::string _idSecu, std::string _nom, std::string _prenom,std::string _telephone,std::string _portable,std::string _ville);
+    Personne(const Personne &p);
     ~Personne();
 
     std::string getId();
+    void afficher();
 
 protected:
     std::string idSecu;

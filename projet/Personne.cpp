@@ -17,11 +17,13 @@ Personne::Personne()
 };
 
 // Constructeur
-Personne::Personne(string _idSecu,string _nom,string _prenom){
+Personne::Personne(string _idSecu,string _nom,string _prenom,string _telephone,string _portable,string _ville){
     this->idSecu=_idSecu;
     this->nom=_nom;
     this->prenom=_prenom;
-    cout << "Personne crée" << endl;
+    this->telephone=_telephone;
+    this->portable=_portable;
+    this->ville=_ville;
 }
 
 // Constructeur de copie
@@ -36,15 +38,17 @@ Personne::Personne(const Personne &p)
     this->rue = p.rue;
     this->ville = p.ville;
     this->cp = p.cp;
-    cout << "Personne crée" << endl;
 };
 
 // Destructeur
 Personne::~Personne()
 {
-    cout << "Personne a disparu..." << endl;
 }
 
 string Personne::getId(){
     return idSecu;
+}
+
+void Personne::afficher() {
+cout << "{ Nom : " << this->nom << " | Prénom : " << this->prenom << " | Telephone : " << this->telephone << " | Portable : " << this->portable << " | Ville : " << this->ville << " }" << endl;
 }

@@ -9,10 +9,10 @@ using namespace std;
 int main(int argc, char **argv)
 {
     Registre *registreVaccin = new Registre();
-    Personne *romainDarnis = new Personne("1010719031", "DARNIS", "Romain"); // PointColMas crée
+    Personne *romainDarnis = new Personne("1010719031", "DARNIS", "Romain","0633384993","0633384993","Gradignan"); // PointColMas crée
 
     registreVaccin->ajout(*romainDarnis);
-    registreVaccin->ajout(*romainDarnis);
+    registreVaccin->affiche();
     delete romainDarnis;
     delete registreVaccin;
 }
