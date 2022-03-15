@@ -23,6 +23,6 @@ protected:
     int cp;
     bool contact;
     bool rdv;
-    enum vaccination : int;
+    //enum vaccination{A, B, C};
 };
 #endif
