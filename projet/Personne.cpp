@@ -21,6 +21,7 @@ Personne::Personne(string _idSecu,string _nom,string _prenom){
     this->idSecu=_idSecu;
     this->nom=_nom;
     this->prenom=_prenom;
+    cout << "Personne crée" << endl;
 }
 
 // Constructeur de copie

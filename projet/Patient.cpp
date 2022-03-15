@@ -18,7 +18,7 @@ Patient::Patient(string _idSecu, string _nom, string _prenom): Personne(_idSecu,
 // Constructeur de copie
 Patient::Patient(const Personne &pa)
 {
-    cout << "Personne crée" << endl;
+    cout << "Patient crée" << endl;
 };
 
 // Destructeur

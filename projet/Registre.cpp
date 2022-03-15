@@ -22,3 +22,15 @@ Registre::~Registre()
 {
     cout << "Registre a disparu..." << endl;
 }
+
+void Registre::ajout(Personne laPersonne)
+{
+    if (this->leRegistre.find("") != leRegistre.end())
+    {
+        cout << "Cette personne est déjà dans ce registre !" << endl;
+    }
+    else
+    {
+        //this->leRegistre[]
+    }
+}

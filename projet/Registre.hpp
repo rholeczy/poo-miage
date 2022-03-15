@@ -10,6 +10,7 @@ public:
     ~Registre();
 
     void affiche();
+    void ajout(Personne laPersonne);
 
 private:
     std::map<std::string, Personne> leRegistre;
