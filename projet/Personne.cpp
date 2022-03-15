@@ -38,7 +38,7 @@ Personne::Personne(string _idSecu, string _nom, string _prenom, string _telephon
     this->rdvAccepte = _rdvAccepte;
     this->etat = _etat;
     this->vaccin = _vaccin;
-    this->prioritaire=false;
+    this->prioritaire = false;
 }
 
 // Constructeur de copie
@@ -93,11 +93,13 @@ int Personne::getEtat()
     return this->etat;
 }
 
-bool Personne::getContact(){
+bool Personne::getContact()
+{
     return this->estContacte;
 }
 
-bool Personne::getAttente(){
+bool Personne::getAttente()
+{
     return this->rdvAccepte;
 }
 
@@ -106,11 +108,14 @@ void Personne::afficher()
     cout << "{ Prio : " << this->prioritaire << " | Nom : " << this->nom << " | Prénom : " << this->prenom << " | Téléphone : " << this->telephone << " | Nb Vaccins : " << this->etat << " | Conctacté : " << this->estContacte << " | RDV : " << this->rdvAccepte << " | Vaccin: " << this->getVaccin() << " }" << endl;
 }
 
-void Personne::updatePrio(){
-    if (this->prioritaire==true){
-        this->prioritaire=false;
+void Personne::updatePrio()
+{
+    if (this->prioritaire == true)
+    {
+        this->prioritaire = false;
     }
-    else{
-        this->prioritaire=true;
+    else
+    {
+        this->prioritaire = true;
     }
 }

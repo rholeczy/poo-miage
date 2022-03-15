@@ -32,7 +32,6 @@ public:
     bool getContact();
     bool getAttente();
 
-
 private:
     std::string idSecu;
     std::string nom;

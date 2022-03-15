@@ -61,7 +61,7 @@ void Registre::afficherPremiereDoseContact()
     cout << "Voici le contenu du Registre : " << endl;
     for (p = this->leRegistre.begin(); p != this->leRegistre.end(); p++)
     {
-        if ((p->second.getEtat()== p->second.non_vaccine) && (!p->second.getContact()))
+        if ((p->second.getEtat() == p->second.non_vaccine) && (!p->second.getContact()))
         {
             cout << p->first << " : ";
             p->second.afficher();
@@ -69,12 +69,13 @@ void Registre::afficherPremiereDoseContact()
     }
 }
 
-void Registre::afficherDeuxiemeDoseContact(){
-     map<string, Personne>::iterator p; //Création d'un itérator sur le 'map'
+void Registre::afficherDeuxiemeDoseContact()
+{
+    map<string, Personne>::iterator p; //Création d'un itérator sur le 'map'
     cout << "Voici le contenu du Registre : " << endl;
     for (p = this->leRegistre.begin(); p != this->leRegistre.end(); p++)
     {
-        if ((p->second.getEtat()== p->second.une_dose) && (!p->second.getContact()))
+        if ((p->second.getEtat() == p->second.une_dose) && (!p->second.getContact()))
         {
             cout << p->first << " : ";
             p->second.afficher();
@@ -82,8 +83,9 @@ void Registre::afficherDeuxiemeDoseContact(){
     }
 }
 
-void Registre::afficherNoContact(){
-     map<string, Personne>::iterator p; //Création d'un itérator sur le 'map'
+void Registre::afficherNoContact()
+{
+    map<string, Personne>::iterator p; //Création d'un itérator sur le 'map'
     cout << "Voici le contenu du Registre : " << endl;
     for (p = this->leRegistre.begin(); p != this->leRegistre.end(); p++)
     {
@@ -95,8 +97,9 @@ void Registre::afficherNoContact(){
     }
 }
 
-void Registre::afficherEnAttente(){
-     map<string, Personne>::iterator p; //Création d'un itérator sur le 'map'
+void Registre::afficherEnAttente()
+{
+    map<string, Personne>::iterator p; //Création d'un itérator sur le 'map'
     cout << "Voici le contenu du Registre : " << endl;
     for (p = this->leRegistre.begin(); p != this->leRegistre.end(); p++)
     {
@@ -108,9 +111,9 @@ void Registre::afficherEnAttente(){
     }
 }
 
-void Registre::changerPrio(Personne laPersonne){
+void Registre::changerPrio(Personne laPersonne)
+{
     laPersonne.updatePrio();
     supprime(laPersonne);
     ajout(laPersonne);
 }
-

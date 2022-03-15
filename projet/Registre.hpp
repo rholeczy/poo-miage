@@ -19,7 +19,6 @@ public:
     void ajout(Personne laPersonne);
     void supprime(Personne laPersonne);
 
-
     void modifStatutContact(Personne laPersonne, bool estContact);
     void modifStatutRdv(Personne laPersonne, bool enRdv);
     void modifStatutVaccination(Personne laPersonne, Personne::etatVaccinal _etat);
