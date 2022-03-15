@@ -25,12 +25,12 @@ Registre::~Registre()
 
 void Registre::ajout(Personne laPersonne)
 {
-    if (this->leRegistre.find("") != leRegistre.end())
+    if (this->leRegistre.find(laPersonne.getId()) != leRegistre.end())
     {
         cout << "Cette personne est déjà dans ce registre !" << endl;
     }
     else
     {
-        //this->leRegistre[]
+        this->leRegistre[laPersonne.getId()] = laPersonne;
     }
 }

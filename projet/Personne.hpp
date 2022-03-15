@@ -9,7 +9,7 @@ public:
     Personne(std::string _idSecu, std::string _nom, std::string _prenom);
     ~Personne();
 
-
+    std::string getId();
 
 protected:
     std::string idSecu;

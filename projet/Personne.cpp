@@ -45,3 +45,6 @@ Personne::~Personne()
     cout << "Personne a disparu..." << endl;
 }
 
+string Personne::getId(){
+    return idSecu;
+}
