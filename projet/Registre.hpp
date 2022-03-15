@@ -13,7 +13,7 @@ public:
     void ajout(Personne laPersonne);
     void modifStatutAppel(Personne laPersonne, bool action);
     void modifStatutRdv(Personne laPersonne, bool reponse);
-    //void modifStatutVaccination(Personne laPersonne, enum stade);
+    void modifStatutVaccination(Personne laPersonne, enum stade);
 
 private:
     std::map<std::string, Personne> leRegistre;
