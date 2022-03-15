@@ -6,11 +6,12 @@ class Registre
 
 public:
     Registre();
-    Registre(std::string _couleur);
     Registre(const Registre &r);
     ~Registre();
 
-protected:
-    std::string couleur;
+    void affiche();
+
+private:
+    std::map<std::string, Personne> leRegistre;
 };
 #endif

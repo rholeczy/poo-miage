@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Constructeur par défaut
 Couleur::Couleur()
 {
     this->couleur = "";

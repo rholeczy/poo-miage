@@ -8,6 +8,7 @@
 
 using namespace std;
 
+// Constructeur par défaut
 PointColMas::PointColMas()
 {
     cout << "PointColMas crée" << endl;

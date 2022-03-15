@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Constructeur par défaut
 PointColore::PointColore()
 {
     this->couleur = "";

@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Constructeur par défaut
 Point::Point()
 {
     this->x = 0;

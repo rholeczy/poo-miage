@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// Constructeur par défaut
 PointColore::PointColore()
 {
     cout << "PointColore crée" << endl;

@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Constructeur par défaut
 Masse::Masse()
 {
     this->masse = 0;

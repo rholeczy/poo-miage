@@ -5,10 +5,11 @@ class Personne
 {
 
 public:
-    Personne(std::string idSecu, std::string nom, std::string prenom);
+    Personne();
+    Personne(std::string _idSecu, std::string _nom, std::string _prenom);
     ~Personne();
 
-    void affiche();
+
 
 protected:
     std::string idSecu;

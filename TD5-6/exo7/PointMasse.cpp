@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// Constructeur par défaut
 PointMasse::PointMasse()
 {
     cout << "PointMasse crée" << endl;
