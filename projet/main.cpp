@@ -115,7 +115,6 @@ int main(int argc, char **argv)
                {
                     Personne p = registreVaccin->getPersonne(c);
                     registreVaccin->changerPrio(p);
-
                }
                else
                {
