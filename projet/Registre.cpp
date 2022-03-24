@@ -8,19 +8,19 @@ using namespace std;
 Registre::Registre()
 {
     this->leRegistre.clear();
-};
+}
 
 Registre::Registre(const Registre &r)
 {
     this->leRegistre = r.leRegistre;
-};
+}
 
 // Destructeur
 Registre::~Registre()
 {
 }
 
-void Registre::ajout(Personne laPersonne)
+void Registre::ajout(Personne &laPersonne)
 {
     if (this->leRegistre.find(laPersonne.getId()) != leRegistre.end())
     {
@@ -32,7 +32,7 @@ void Registre::ajout(Personne laPersonne)
     }
 }
 
-void Registre::supprime(Personne laPersonne)
+void Registre::supprime(Personne &laPersonne)
 {
     if (this->leRegistre.find(laPersonne.getId()) == leRegistre.end())
     {
@@ -111,8 +111,24 @@ void Registre::afficherEnAttente()
     }
 }
 
+bool Registre::verifierId(string id)
+{
+    if (this->leRegistre.find(id) != this->leRegistre.end())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 void Registre::changerPrio(Personne laPersonne)
 {
     laPersonne.updatePrio();
     this->leRegistre[laPersonne.getId()] = laPersonne;
+}
+
+Personne Registre::getPersonne(string id){
+    return this->leRegistre[id];
 }

@@ -16,9 +16,10 @@ public:
     void afficherEnAttente();
     void changerPrio(Personne laPersonne);
 
-    void ajout(Personne laPersonne);
-    void supprime(Personne laPersonne);
-
+    void ajout(Personne &laPersonne);
+    void supprime(Personne &laPersonne);
+    bool verifierId(std::string id);
+    Personne getPersonne(std::string id);
     void modifStatutContact(Personne laPersonne, bool estContact);
     void modifStatutRdv(Personne laPersonne, bool enRdv);
     void modifStatutVaccination(Personne laPersonne, Personne::etatVaccinal _etat);

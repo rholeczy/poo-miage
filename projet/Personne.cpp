@@ -39,6 +39,7 @@ Personne::Personne(string _idSecu, string _nom, string _prenom, string _telephon
     this->etat = _etat;
     this->vaccin = _vaccin;
     this->prioritaire = false;
+    
 }
 
 // Constructeur de copie

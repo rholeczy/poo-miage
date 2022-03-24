@@ -7,9 +7,9 @@ class Personne
 public:
     enum typeVaccin
     {
-        Suretcertin,
-        Presksur,
-        Fotvoir
+        Suretcertin=0,
+        Presksur=1,
+        Fotvoir=2
     };
     enum etatVaccinal
     {
