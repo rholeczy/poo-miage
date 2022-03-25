@@ -5,13 +5,13 @@
 
 using namespace std;
 
-void afficherOptionsBase(); // Affiche dans le terminal les options de base.
-void charger(Registre &r); // Charge des exemples de personne.
+void afficherOptionsBase();                              // Affiche dans le terminal les options de base.
+void charger(Registre &r);                               // Charge des exemples de personne.
 void enregistrerPersonne(Registre &registre, string id); // Enregistrer une personne dans registre.
-bool estInt(const string &s); // Vérifier si le string est un int.
-bool getBool(string yesno); // Obtenir le booléen à partir d'un string.
-Personne::etatVaccinal getEtatVaccin(string nbDose); // Récuperer l'état vaccinal à partir d'un string.
-Personne::typeVaccin getVaccin(string vaccin); // Récuperer le type de vaccin à partir d'un string.
+bool estInt(const string &s);                            // Vérifier si le string est un int.
+bool getBool(string yesno);                              // Obtenir le booléen à partir d'un string.
+Personne::etatVaccinal getEtatVaccin(string nbDose);     // Récuperer l'état vaccinal à partir d'un string.
+Personne::typeVaccin getVaccin(string vaccin);           // Récuperer le type de vaccin à partir d'un string.
 
 int main(int argc, char **argv)
 {
@@ -117,6 +117,7 @@ int main(int argc, char **argv)
                {
                     Personne p = registreVaccin->getPersonne(c);
                     registreVaccin->changerPrio(p);
+                    cout << "Modification effectuée." << endl;
                }
                else
                {
@@ -130,14 +131,120 @@ int main(int argc, char **argv)
           else if (c == "8")
           {
                cout << "\x1B[2J\x1B[H";
-               charger(*registreVaccin);
-               cout << "Les exemples ont été ajoutés au registre." << endl;
+               cout << "Numéro de Sécurité Sociale : ";
+               cin >> c;
+
+               while (!estInt(c))
+               {
+                    cout << "Il faut un numéro ! ";
+                    cout << ">";
+                    cin >> c;
+               }
+
+               registreVaccin->verifierId(c);
+               if (registreVaccin->verifierId(c))
+               {
+                    Personne p = registreVaccin->getPersonne(c);
+                    registreVaccin->modifStatutContact(p);
+                    cout << "Modification effectuée." << endl;
+               }
+               else
+               {
+                    cout << "\nNuméro de sécurité pas dans la liste." << endl;
+               }
                cout << "Tapez un caractère pour retourner au menu." << endl;
                cout << ">";
                cin >> c;
           }
 
           else if (c == "9")
+          {
+               cout << "\x1B[2J\x1B[H";
+               cout << "Numéro de Sécurité Sociale : ";
+               cin >> c;
+
+               while (!estInt(c))
+               {
+                    cout << "Il faut un numéro ! ";
+                    cout << ">";
+                    cin >> c;
+               }
+
+               registreVaccin->verifierId(c);
+               if (registreVaccin->verifierId(c))
+               {
+                    Personne p = registreVaccin->getPersonne(c);
+                    registreVaccin->modifStatutRdv(p);
+                    cout << "Modification effectuée." << endl;
+               }
+               else
+               {
+                    cout << "\nNuméro de sécurité pas dans la liste." << endl;
+               }
+               cout << "Tapez un caractère pour retourner au menu." << endl;
+               cout << ">";
+               cin >> c;
+          }
+
+          else if (c == "10")
+          {
+               cout << "\x1B[2J\x1B[H";
+               cout << "Numéro de Sécurité Sociale : ";
+               cin >> c;
+
+               while (!estInt(c))
+               {
+                    cout << "Il faut un numéro ! ";
+                    cout << ">";
+                    cin >> c;
+               }
+
+               registreVaccin->verifierId(c);
+               if (registreVaccin->verifierId(c))
+               {
+                    Personne p = registreVaccin->getPersonne(c);
+                    registreVaccin->modifStatutVaccination(p);
+                    cout << "Modification effectuée." << endl;
+               }
+               else
+               {
+                    cout << "\nNuméro de sécurité pas dans la liste." << endl;
+               }
+               cout << "Tapez un caractère pour retourner au menu." << endl;
+               cout << ">";
+               cin >> c;
+          }
+
+          else if (c == "11")
+          {
+               cout << "\x1B[2J\x1B[H";
+               cout << "Numéro de Sécurité Sociale : ";
+               cin >> c;
+
+               while (!estInt(c))
+               {
+                    cout << "Il faut un numéro ! ";
+                    cout << ">";
+                    cin >> c;
+               }
+
+               registreVaccin->verifierId(c);
+               if (registreVaccin->verifierId(c))
+               {
+                    Personne p = registreVaccin->getPersonne(c);
+                    registreVaccin->supprime(p);
+                    cout << "Suppression effectuée." << endl;
+               }
+               else
+               {
+                    cout << "\nNuméro de sécurité pas dans la liste." << endl;
+               }
+               cout << "Tapez un caractère pour retourner au menu." << endl;
+               cout << ">";
+               cin >> c;
+          }
+
+          else if (c == "12")
           {
                cout << "\x1B[2J\x1B[H";
                charger(*registreVaccin);
@@ -154,7 +261,7 @@ int main(int argc, char **argv)
 }
 
 // Affiche dans le terminal les options de base.
-void afficherOptionsBase() 
+void afficherOptionsBase()
 {
      cout << "\x1B[2J\x1B[H";
      cout << "Actions disponibles : (taper chiffre) \n"
@@ -169,8 +276,8 @@ void afficherOptionsBase()
      cout << "8. Modifier le statut de 'Contacté' d'une personne." << endl;
      cout << "9. Modifier le statut de 'rdv' d'une personne." << endl;
      cout << "10. Modifier le nombre de doses d'une personne." << endl;
-     cout << "10. Supprimer une personne du registre." << endl;
-     cout << "11. Ajouter des personnes d'exemples." << endl;
+     cout << "11. Supprimer une personne du registre." << endl;
+     cout << "12. Ajouter des personnes d'exemples." << endl;
 }
 
 // Charge des exemples de personne.

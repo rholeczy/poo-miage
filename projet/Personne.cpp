@@ -39,7 +39,6 @@ Personne::Personne(string _idSecu, string _nom, string _prenom, string _telephon
     this->etat = _etat;
     this->vaccin = _vaccin;
     this->prioritaire = false;
-    
 }
 
 // Constructeur de copie
@@ -125,5 +124,43 @@ void Personne::updatePrio()
     else
     {
         this->prioritaire = true;
+    }
+}
+
+// Mettre à jour le booléen 'estConctacte'
+void Personne::updateContact()
+{
+    if (this->estContacte == true)
+    {
+        this->estContacte = false;
+    }
+    else
+    {
+        this->estContacte = true;
+    }
+}
+
+// Mettre à jour le booléen 'rdvAccepte'
+void Personne::updateRdv(){
+    if (this->estContacte == true)
+    {
+        this->estContacte = false;
+    }
+    else
+    {
+        this->estContacte = true;
+    }
+}  
+
+// Mettre à jour le nombre de doses pour une personne
+void Personne::updateVaccin(){
+    switch(this->etat)
+    {
+    case non_vaccine:
+        this->etat=une_dose;
+        break;
+    case une_dose:
+        this->etat=deux_doses;
+        break;
     }
 }
