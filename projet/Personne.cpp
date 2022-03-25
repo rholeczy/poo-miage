@@ -162,5 +162,8 @@ void Personne::updateVaccin(){
     case une_dose:
         this->etat=deux_doses;
         break;
+    case deux_doses:
+        cout << "Nombre de doses max atteint" << endl;
+        break;
     }
 }
