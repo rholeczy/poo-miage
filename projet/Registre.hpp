@@ -5,26 +5,27 @@ class Registre
 {
 
 public:
-    Registre();
-    Registre(const Registre &r);
-    ~Registre();
+    Registre(); // Constructeur par défaut
+    Registre(const Registre &r); // Constructeur de copie
+    ~Registre(); // Destructeur
 
-    void affiche();
-    void afficherPremiereDoseContact();
-    void afficherDeuxiemeDoseContact();
-    void afficherNoContact();
-    void afficherEnAttente();
-    void changerPrio(Personne laPersonne);
+    void affiche(); // Afficher le contenu du registre.
+    void afficherPremiereDoseContact(); // Afficher les personnes à contacter pour une première dose.
+    void afficherDeuxiemeDoseContact(); // Afficher les personnes à contacter pour une deuxième dose.
+    void afficherNoContact(); // Afficher les personnes non contactées.
+    void afficherEnAttente(); // Afficher les personnes en attente d'un rdv.
+    void changerPrio(Personne laPersonne); // Fonction qui change la priorité de quelqu'un.
 
-    void ajout(Personne &laPersonne);
-    void supprime(Personne &laPersonne);
-    bool verifierId(std::string id);
+    void ajout(Personne &laPersonne); // ajouter une personne dans le registre.
+    void supprime(Personne &laPersonne);// supprimer une personne dans le registre.
+    bool verifierId(std::string id);// Vérifier si une personne est dans le registre avec le numéro de sécu.
     Personne getPersonne(std::string id);
-    void modifStatutContact(Personne laPersonne, bool estContact);
-    void modifStatutRdv(Personne laPersonne, bool enRdv);
-    void modifStatutVaccination(Personne laPersonne, Personne::etatVaccinal _etat);
+
+    void modifStatutContact(std::string id);// Modifier le statut du booléen contacté.
+    void modifStatutRdv(std::string id);// Modifier le statut du booléen rdv.
+    void modifStatutVaccination(std::string id);// Modifier le statut de la vaccination.
 
 private:
-    std::map<std::string, Personne> leRegistre;
+    std::map<std::string, Personne> leRegistre; // map du registre de personnes.
 };
 #endif

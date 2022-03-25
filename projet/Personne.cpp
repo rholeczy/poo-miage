@@ -66,11 +66,13 @@ Personne::~Personne()
 {
 }
 
+// Obtenir le numéro de sécurité.
 string Personne::getId()
 {
     return idSecu;
 }
 
+// Obtenir le type de vaccin choisi.
 string Personne::getVaccin()
 {
     string res;
@@ -89,26 +91,31 @@ string Personne::getVaccin()
     return res;
 }
 
+// Obtenir le nombre de doses.
 int Personne::getEtat()
 {
     return this->etat;
 }
 
+// Obtenir si une personne est contacté.
 bool Personne::getContact()
 {
     return this->estContacte;
 }
 
+// Obtenir si une personne est en attente d'un rdv.
 bool Personne::getAttente()
 {
     return this->rdvAccepte;
 }
 
+// Afficher les informations d'une personne.
 void Personne::afficher()
 {
     cout << "{ Prio : " << this->prioritaire << " | Nom : " << this->nom << " | Prénom : " << this->prenom << " | Téléphone : " << this->telephone << " | Nb Vaccins : " << this->etat << " | Conctacté : " << this->estContacte << " | RDV : " << this->rdvAccepte << " | Vaccin: " << this->getVaccin() << " }" << endl;
 }
 
+// Modifier la valeure booléenne de la priorité
 void Personne::updatePrio()
 {
     if (this->prioritaire == true)

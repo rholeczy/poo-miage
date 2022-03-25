@@ -5,13 +5,13 @@
 
 using namespace std;
 
-void afficherOptionsBase();
-void charger(Registre &r);
-void enregistrerPersonne(Registre &registre, string id);
-bool estInt(const string &s);
-bool getBool(string yesno);
-Personne::etatVaccinal getEtatVaccin(string nbDose);
-Personne::typeVaccin getVaccin(string vaccin);
+void afficherOptionsBase(); // Affiche dans le terminal les options de base.
+void charger(Registre &r); // Charge des exemples de personne.
+void enregistrerPersonne(Registre &registre, string id); // Enregistrer une personne dans registre.
+bool estInt(const string &s); // Vérifier si le string est un int.
+bool getBool(string yesno); // Obtenir le booléen à partir d'un string.
+Personne::etatVaccinal getEtatVaccin(string nbDose); // Récuperer l'état vaccinal à partir d'un string.
+Personne::typeVaccin getVaccin(string vaccin); // Récuperer le type de vaccin à partir d'un string.
 
 int main(int argc, char **argv)
 {
@@ -50,11 +50,13 @@ int main(int argc, char **argv)
                if (!registreVaccin->verifierId(c))
                {
                     enregistrerPersonne(*registreVaccin, c);
+                    cout << "Personne crée et ajoutée." << endl;
                }
                else
                {
                     cout << "\nNuméro de sécurité déjà dans la liste." << endl;
                }
+
                cout << "Tapez un caractère pour retourner au menu." << endl;
                cout << ">";
                cin >> c;
@@ -149,13 +151,10 @@ int main(int argc, char **argv)
                cout << "\x1B[2J\x1B[H";
           }
      }
-
-     /*
-     registreVaccin->changerPrio(*sidonieMarty);
-     registreVaccin->affiche();*/
 }
 
-void afficherOptionsBase()
+// Affiche dans le terminal les options de base.
+void afficherOptionsBase() 
 {
      cout << "\x1B[2J\x1B[H";
      cout << "Actions disponibles : (taper chiffre) \n"
@@ -167,9 +166,14 @@ void afficherOptionsBase()
      cout << "5. Afficher les personnes non contactés." << endl;
      cout << "6. Afficher les personnes en attente d'un rdv." << endl;
      cout << "7. Changer priorité d'un patient." << endl;
-     cout << "8. Ajouter des personnes d'exemples." << endl;
+     cout << "8. Modifier le statut de 'Contacté' d'une personne." << endl;
+     cout << "9. Modifier le statut de 'rdv' d'une personne." << endl;
+     cout << "10. Modifier le nombre de doses d'une personne." << endl;
+     cout << "10. Supprimer une personne du registre." << endl;
+     cout << "11. Ajouter des personnes d'exemples." << endl;
 }
 
+// Charge des exemples de personne.
 void charger(Registre &r)
 {
 
@@ -191,6 +195,7 @@ void charger(Registre &r)
      r.ajout(*brunoMery);
 }
 
+// Enregistrer une personne dans registre.
 void enregistrerPersonne(Registre &registre, string id)
 {
      string nom;
@@ -294,6 +299,7 @@ void enregistrerPersonne(Registre &registre, string id)
      delete personne;
 }
 
+// Vérifier si le string est un int.
 bool estInt(const string &s)
 {
      string::const_iterator it = s.begin();
@@ -302,6 +308,7 @@ bool estInt(const string &s)
      return !s.empty() && it == s.end();
 }
 
+// Récuperer l'état vaccinal à partir d'un string.
 Personne::etatVaccinal getEtatVaccin(string nbDose)
 {
      if (nbDose == "0")
@@ -318,6 +325,7 @@ Personne::etatVaccinal getEtatVaccin(string nbDose)
      }
 }
 
+// Récuperer le type de vaccin à partir d'un string.
 Personne::typeVaccin getVaccin(string vaccin)
 {
      if (vaccin == "1")
@@ -334,6 +342,7 @@ Personne::typeVaccin getVaccin(string vaccin)
      }
 }
 
+// Obtenir le booléen à partir d'un string.
 bool getBool(string yesno)
 {
      if (yesno == "y")
